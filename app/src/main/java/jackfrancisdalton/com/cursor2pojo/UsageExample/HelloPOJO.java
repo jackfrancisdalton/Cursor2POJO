@@ -4,6 +4,8 @@ import jackfrancisdalton.com.cursor2pojo.C2PColumnInfo;
 
 /**
  * Created by Jack F. Dalton on 0015 15 07 2017.
+ *
+ * Example HelloPOJO details how to structure a class to work with Cursor2POJO
  */
 
 public class HelloPOJO {
@@ -11,10 +13,10 @@ public class HelloPOJO {
     @C2PColumnInfo(name = "name_column")
     private String name;
 
-    @C2PColumnInfo(name = "name_column")
+    @C2PColumnInfo(name = "value_column")
     private int value;
 
-    @C2PColumnInfo(name = "name_column")
+    @C2PColumnInfo(name = "predicate_value")
     private boolean predicate;
 
     public HelloPOJO(String name, int value, boolean predicate) {
