@@ -56,4 +56,8 @@ return (List) C2PMapper.execute(
 # Limitations
 You are required to declare if you want a List or single object instance as due to Type erasure in Java you cannot request the type of object contained in a List through reflection.
 
+As this maps using reflection, it is likley that large lists will take a little longer as reflection is slower than compiled code.
+
+I am hoping to support `@ColumnInfo` from the Room persistance library as an equivlent to `@C2PColumnInfo`, however as of right now it is not possible to access Room annotation information as they have their `RetentionPolicy` set to `CLASS`. I have sent this to google issue tracker and hope to make headway on this once changed. https://issuetracker.google.com/issues/63720940
+
 Complex structures such as @Embedded and @TypeConverter from Android Room persistance are not currently supported.
